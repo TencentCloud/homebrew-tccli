@@ -5,8 +5,8 @@ class Tccli < Formula
   include Language::Python::Virtualenv
   desc "Tencent Cloud API 3.0 Command Line Interface"
   homepage "https://cloud.tencent.com/document/product/440/6176"
-  url "https://github.com/TencentCloud/tencentcloud-cli/archive/3.0.1221.1.tar.gz"
-  sha256 "1f99536d68f7a135fc200ad94c3f988f7cb3eeccaa7179d7bb6c44f47816868d"
+  url "https://github.com/TencentCloud/tencentcloud-cli-intl-en/archive/3.0.1067.1.tar.gz"
+  sha256 "0a41cc520871f4e26ec17ba3e4a5a3da96a01f392ab963febb5b52b9d612fc14"
   license "Apache-2.0"
 
   depends_on "python@3.9"
@@ -15,7 +15,7 @@ class Tccli < Formula
     venv = virtualenv_create(libexec, "python3", without_pip: false)
     system libexec/"bin/pip", "install", "-v", 
                               "--ignore-installed", buildpath
-    system libexec/"bin/pip", "uninstall", "-y", "tccli"
+    system libexec/"bin/pip", "uninstall", "-y", "tccli-intl-en"
     venv.pip_install_and_link buildpath
     system libexec/"bin/pip", "uninstall", "-y", "pyinstaller"
 
