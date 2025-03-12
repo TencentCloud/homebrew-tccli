@@ -15,7 +15,7 @@ class Tccli < Formula
     venv = virtualenv_create(libexec, "python3", without_pip: false)
     system libexec/"bin/pip", "install", "-v", 
                               "--ignore-installed", buildpath
-    system libexec/"bin/pip", "uninstall", "-y", "tccli"
+    system libexec/"bin/pip", "uninstall", "-y", "tccli-intl-en"
     venv.pip_install_and_link buildpath
     system libexec/"bin/pip", "uninstall", "-y", "pyinstaller"
 
