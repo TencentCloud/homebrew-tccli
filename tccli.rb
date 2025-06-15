@@ -5,8 +5,8 @@ class Tccli < Formula
   include Language::Python::Virtualenv
   desc "Tencent Cloud API 3.0 Command Line Interface"
   homepage "https://cloud.tencent.com/document/product/440/6176"
-  url "https://github.com/TencentCloud/tencentcloud-cli/archive/3.0.1332.1.tar.gz"
-  sha256 "bc0193efb3364446184387a8598ef86d3d9440102851e462482c66dca6509e2e"
+  url "https://github.com/TencentCloud/tencentcloud-cli/archive/3.0.1333.1.tar.gz"
+  sha256 "ebad35cb6d2bf45e723c91895b4cfe17273f14dbcd95d45687b1b35a91a3a409"
   license "Apache-2.0"
 
   depends_on "python@3.9"
