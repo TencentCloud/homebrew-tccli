@@ -9,7 +9,7 @@ class Tccli < Formula
   sha256 "f79025784015a0ea5002ab2399a1aa5ce8f8ad2c4286be1a99bc664e0db1eedb"
   license "Apache-2.0"
 
-  depends_on "python@3.9"
+  depends_on "python@3.10"
 
   def install
     venv = virtualenv_create(libexec, "python3", without_pip: false)
