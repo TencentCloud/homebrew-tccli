@@ -9,7 +9,7 @@ class TccliIntlEn < Formula
   sha256 "60dfa2201d09e8ec050ec55545cbc27487b7093198cacc828458473df6f59738"
   license "Apache-2.0"
 
-  depends_on "python@3.10"
+  depends_on "python@3.14"
 
   def install
     venv = virtualenv_create(libexec, "python3", without_pip: false)
@@ -22,15 +22,6 @@ class TccliIntlEn < Formula
   end
 
   test do
-    # `test do` will create, run in and delete a temporary directory.
-    #
-    # This test will fail and we won't accept that! For Homebrew/homebrew-core
-    # this will need to be a test that verifies the functionality of the
-    # software. Run the test with `brew test tencentcloud-cli`. Options passed
-    # to `brew install` such as `--HEAD` also need to be provided to `brew test`.
-    #
-    # The installed folder is not in the path, so use the entire path to any
-    # executables being tested: `system "#{bin}/program", "do", "something"`.
-    system "false"
+    assert_match version.to_s, shell_output("#{bin}/tccli --version")
   end
 end
